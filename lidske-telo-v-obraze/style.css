@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    margin:0;    
+    background-color: #fff1e6
+}
+.patka{
+    color: white;
+    background-color:#282425;
+    padding: 1px 0;
+}
+.hlavicka {
+    padding: 100px 30px;
+    background-image: url(hlavicka.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% 50%;
+}
+
+h1 { 
+    color: black
+    
+
+}
+h2 {
+    color:#756158
+
+}
+a {
+    color:rgb(41, 17, 17)
+
+}
+
+.lekce1,
+.lekce3,
+.lekce5 {
+    background-color: #f9e3d0
+
+}
+li {
+    text-align: left;
+}
+ul {
+    padding-left: 44%;
+}

@@ -1,0 +1,27 @@
+body {
+    background-color: #c5f3ff;
+    margin: 100px;
+    
+
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    margin: 0 0 50px 0;
+    background-image: url(../img/hlavicka.png);
+    margin: 0;
+    padding: 70px;
+    color: white;
+    text-shadow: 0 3px 10px rgba( 0, 0, 0, 0.7);
+
+}
+
+.ods {
+    margin:0;
+    width: 500px;
+
+}
+a {
+    color: #242628;
+}
