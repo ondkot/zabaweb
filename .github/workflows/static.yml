@@ -34,15 +34,18 @@ jobs:
         uses: actions/checkout@v3
       - name: Run build python script
         run: cd source && python generate_static.py
-      - name: Push generated static pages
+      - name: Commit
         run: |
              git remote set-url origin ${{ secrets.ssh }}
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
              git add .
              git commit -m "Build pages"
-             git fetch origin HEAD:master
-             git push origin HEAD:master
+      - name: Push generated static pages
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: build_secret_shit-jumping
+          branch: HEAD:master
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
