@@ -31,7 +31,7 @@ jobs:
       - name: Install Jinja2
         run: pip install Jinja2
       - name: Run build python script
-        run: python3 source/generate_static.py
+        run: pwd && python3 source/generate_static.py
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
