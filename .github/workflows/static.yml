@@ -40,7 +40,7 @@ jobs:
       - name: Commit
         run: |
              cd ../..
-             cp -R css hry img lidske-telo-v-obraze *.html CNAME checkout_build
+             cp -R css/ hry/ img/ lidske-telo-v-obraze/ *.html CNAME checkout_build/
              cd checkout_build
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
