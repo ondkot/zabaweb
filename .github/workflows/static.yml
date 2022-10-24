@@ -39,10 +39,9 @@ jobs:
              pwd
       - name: Commit
         run: |
-             pwd
              cd ../..
-             cp -R . source/checkout_build
-             cd source/checkout_build
+             cp -R . checkout_build
+             cd checkout_build
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
              git add css hry img lidske-telo-v-obraze *.html CNAME
