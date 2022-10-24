@@ -25,12 +25,16 @@ jobs:
     steps:
       - name: Install Jinja2
         run: pip install Jinja2
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v3
         with:
           ref: main
       - name: Run build python script
         run: cd source && python generate_static.py
+      - name: Checkout build
+        uses: actions/checkout@v3
+        with:
+          ref: build
       - name: Commit
         run: |
              git config --local user.email "test@github.com"
