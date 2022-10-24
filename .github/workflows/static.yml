@@ -41,7 +41,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: build_secret_shit-jumping
-          branch: build
+          branch: main
   deploy:
     environment:
       name: github-pages
@@ -52,7 +52,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: build
+          ref: main
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
