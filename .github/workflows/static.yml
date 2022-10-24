@@ -31,24 +31,12 @@ jobs:
           ref: main
       - name: Run build python script
         run: cd source && python generate_static.py
-      - name: Checkout build
-        run: |
-             mkdir checkout_build
-             cd checkout_build
-             git fetch origin HEAD:build
-             pwd
       - name: Commit
         run: |
-             cp -R css/ hry/ img/ lidske-telo-v-obraze/ *.html CNAME checkout_build/
-             cd checkout_build
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
              git add css hry img lidske-telo-v-obraze *.html CNAME
              git commit -m "Build pages"
-             cp -R . ..
-             cp -R .git ../.git
-             cd ..
-             rm -rf checkout_build
       - name: Push generated static pages
         uses: ad-m/github-push-action@master
         with:
