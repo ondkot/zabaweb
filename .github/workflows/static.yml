@@ -30,10 +30,12 @@ jobs:
     steps:
       - name: Install Jinja2
         run: pip install Jinja2
-      - name: Run build python script
-        run: python ./source/generate_static.py
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Run build python script
+        run: python ./source/generate_static.py
+      - name: Push generated static pages
+        uses: ad-m/github-push-action@master
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
