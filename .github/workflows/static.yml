@@ -35,7 +35,7 @@ jobs:
         run: |
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
-             git add css/* hry/* img/* lidske-telo-v-obraze/* ./*
+             git add css/* hry/* img/* lidske-telo-v-obraze/* *.html CNAME
              git commit -m "Build pages"
       - name: Push generated static pages
         uses: ad-m/github-push-action@master
