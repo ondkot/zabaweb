@@ -30,11 +30,12 @@ jobs:
         with:
           ref: main
       - name: Run build python script
-        run: cd source && python generate_static.py && mkdir checkout_build && cd checkout_build
+        run: cd source && python generate_static.py
       - name: Checkout build
-        uses: actions/checkout@v3
-        with:
-          ref: build
+        run: |
+             mkdir checkout_build
+             cd checkout_build
+             git fetch origin HEAD:build
       - name: Commit
         run: |
              cd ../..
