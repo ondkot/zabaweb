@@ -30,13 +30,16 @@ jobs:
         with:
           ref: main
       - name: Run build python script
-        run: cd source && python generate_static.py
+        run: cd source && python generate_static.py && mkdir checkout_build && cd checkout_build
       - name: Checkout build
         uses: actions/checkout@v3
         with:
           ref: build
       - name: Commit
         run: |
+             cd ../..
+             cp -R . source/checkout_build
+             cd source/checkout_build
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
              git add css hry img lidske-telo-v-obraze *.html CNAME
