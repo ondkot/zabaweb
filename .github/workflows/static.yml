@@ -33,7 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run build python script
-        run: python ./source/generate_static.py
+        run: cd source && python generate_static.py
       - name: Push generated static pages
         uses: ad-m/github-push-action@master
       - name: Setup Pages
