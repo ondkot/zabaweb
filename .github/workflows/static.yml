@@ -46,6 +46,9 @@ jobs:
              git config --local user.name "Build bot"
              git add css hry img lidske-telo-v-obraze *.html CNAME
              git commit -m "Build pages"
+             cp -R . ..
+             cd ..
+             rm -rf checkout_build
       - name: Push generated static pages
         uses: ad-m/github-push-action@master
         with:
