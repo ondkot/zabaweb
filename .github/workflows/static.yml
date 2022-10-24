@@ -40,6 +40,8 @@ jobs:
              git config --local user.name "Build bot"
              git add .
              git commit -m "Build pages"
+             git fetch origin master
+             git push origin HEAD:master
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
