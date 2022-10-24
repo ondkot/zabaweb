@@ -1,0 +1,27 @@
+{
+	"main_template": "base.html.jinja",
+	"articles": [
+		{
+			"filename": "hry.html",
+			"article-name": "Hry, které jste dosud neviděli",
+			"style-suffix": "hry"
+		},
+		{
+			"filename": "index.html",
+			"article-name": "Hlavní stránka",
+			"style-suffix": "index",
+			"isindex": true
+		},
+		{
+			"filename": "o-zabawebu.html",
+			"article-name": "O zábawebu",
+			"style-suffix": "o-zabawebu"
+		},
+		{
+			"filename": "uceni.html",
+			"article-name": "Učení",
+			"style-suffix": "uceni"
+		}
+	],
+	"static": ["css", "hry", "img", "lidske-telo-v-obraze", "CNAME"]
+}
