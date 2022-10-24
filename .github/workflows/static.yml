@@ -36,8 +36,10 @@ jobs:
              mkdir checkout_build
              cd checkout_build
              git fetch origin HEAD:build
+             pwd
       - name: Commit
         run: |
+             pwd
              cd ../..
              cp -R . source/checkout_build
              cd source/checkout_build
