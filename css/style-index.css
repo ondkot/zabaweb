@@ -1,0 +1,16 @@
+h2 {
+    color:#242628;
+}
+
+.obrazek img {
+    width: 40%;
+    height: 508px;
+}
+
+.odstavec {
+    color:white;
+    background-color:black;
+    text-align:top;
+    width: 40%;
+    margin:0;
+}
