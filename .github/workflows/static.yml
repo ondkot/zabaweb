@@ -36,6 +36,7 @@ jobs:
         run: cd source && python generate_static.py
       - name: Push generated static pages
         run: |
+             git remote set-url origin ${{ secrets.ssh }}
              git config --local user.email "test@github.com"
              git config --local user.name "Build bot"
              git add .
