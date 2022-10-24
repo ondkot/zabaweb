@@ -27,6 +27,8 @@ jobs:
         run: pip install Jinja2
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: HEAD:master
       - name: Run build python script
         run: cd source && python generate_static.py
       - name: Commit
@@ -50,7 +52,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          branch: master
+          ref: HEAD:master
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
