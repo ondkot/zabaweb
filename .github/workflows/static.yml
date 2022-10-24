@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Build Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -21,11 +20,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Install Jinja2
@@ -44,6 +39,16 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: build_secret_shit-jumping
+          branch: master
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
           branch: master
       - name: Setup Pages
         uses: actions/configure-pages@v2
