@@ -39,7 +39,7 @@ jobs:
              pwd
       - name: Commit
         run: |
-             cd ../..
+             cd ..
              ls -l
              cp -R css/ hry/ img/ lidske-telo-v-obraze/ *.html CNAME checkout_build/
              cd checkout_build
