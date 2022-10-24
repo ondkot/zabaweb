@@ -35,7 +35,11 @@ jobs:
       - name: Run build python script
         run: cd source && python generate_static.py
       - name: Push generated static pages
-        uses: ad-m/github-push-action@master
+        run: |
+             git config --local user.email "test@github.com"
+             git config --local user.name "Build bot"
+             git add .
+             git commit -m "Build pages"
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
